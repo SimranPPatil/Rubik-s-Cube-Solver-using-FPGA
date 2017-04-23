@@ -1,0 +1,317 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic       
+# functions, and any output files any of the foregoing           
+# (including device programming or simulation files), and any    
+# associated documentation or information are expressly subject  
+# to the terms and conditions of the Altera Program License      
+# Subscription Agreement, Altera MegaCore Function License       
+# Agreement, or other applicable license agreement, including,   
+# without limitation, that your use is for the sole purpose of   
+# programming logic devices manufactured by Altera and sold by   
+# Altera or its authorized distributors.  Please refer to the    
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		TR1_CCD_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:16:58  FEBRUARY 25, 2005"
+set_global_assignment -name LAST_QUARTUS_VERSION "5.1 SP1"
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_226 -to AUD_BCK
+set_location_assignment PIN_234 -to AUD_DATA
+set_location_assignment PIN_233 -to AUD_LRCK
+set_location_assignment PIN_207 -to VSYNC_N
+set_location_assignment PIN_221 -to TVRES
+set_location_assignment PIN_206 -to HSYNC_N
+set_location_assignment PIN_213 -to BLUE[0]
+set_location_assignment PIN_214 -to BLUE[1]
+set_location_assignment PIN_215 -to BLUE[2]
+set_location_assignment PIN_216 -to BLUE[3]
+set_location_assignment PIN_217 -to GREEN[0]
+set_location_assignment PIN_218 -to GREEN[1]
+set_location_assignment PIN_219 -to GREEN[2]
+set_location_assignment PIN_220 -to GREEN[3]
+set_location_assignment PIN_222 -to RED[0]
+set_location_assignment PIN_223 -to RED[1]
+set_location_assignment PIN_224 -to RED[2]
+set_location_assignment PIN_225 -to RED[3]
+set_location_assignment PIN_15 -to SD_DATA[0]
+set_location_assignment PIN_16 -to SD_DATA[1]
+set_location_assignment PIN_17 -to SD_DATA[2]
+set_location_assignment PIN_18 -to SD_DATA[3]
+set_location_assignment PIN_19 -to SD_DATA[4]
+set_location_assignment PIN_20 -to SD_DATA[5]
+set_location_assignment PIN_21 -to SD_DATA[6]
+set_location_assignment PIN_41 -to SD_DATA[7]
+set_location_assignment PIN_42 -to SD_LDQM
+set_location_assignment PIN_43 -to SD_WE_N
+set_location_assignment PIN_44 -to SD_CAS_N
+set_location_assignment PIN_45 -to SD_RAS_N
+set_location_assignment PIN_46 -to SD_CS_N
+set_location_assignment PIN_47 -to SD_BA_0
+set_location_assignment PIN_48 -to SD_DATA[15]
+set_location_assignment PIN_49 -to SD_DATA[14]
+set_location_assignment PIN_53 -to SD_DATA[13]
+set_location_assignment PIN_54 -to SD_DATA[12]
+set_location_assignment PIN_56 -to SD_DATA[11]
+set_location_assignment PIN_57 -to SD_DATA[10]
+set_location_assignment PIN_58 -to SD_DATA[9]
+set_location_assignment PIN_59 -to SD_DATA[8]
+set_location_assignment PIN_60 -to SD_UDQM
+set_location_assignment PIN_38 -to SD_CLK
+set_location_assignment PIN_61 -to SD_CKE
+set_location_assignment PIN_62 -to SD_ADDR[11]
+set_location_assignment PIN_63 -to SD_ADDR[9]
+set_location_assignment PIN_64 -to SD_ADDR[8]
+set_location_assignment PIN_65 -to SD_ADDR[7]
+set_location_assignment PIN_66 -to SD_ADDR[6]
+set_location_assignment PIN_67 -to SD_ADDR[5]
+set_location_assignment PIN_68 -to SD_ADDR[4]
+set_location_assignment PIN_75 -to SD_BA_1
+set_location_assignment PIN_76 -to SD_ADDR[10]
+set_location_assignment PIN_77 -to SD_ADDR[0]
+set_location_assignment PIN_78 -to SD_ADDR[1]
+set_location_assignment PIN_79 -to SD_ADDR[2]
+set_location_assignment PIN_80 -to SD_ADDR[3]
+set_location_assignment PIN_83 -to FL_CE_N
+set_location_assignment PIN_7 -to KEY[4]
+set_location_assignment PIN_14 -to KEY[0]
+set_location_assignment PIN_6 -to KEY[5]
+set_location_assignment PIN_13 -to KEY[1]
+set_location_assignment PIN_4 -to KEY[6]
+set_location_assignment PIN_12 -to KEY[2]
+set_location_assignment PIN_2 -to KEY[7]
+set_location_assignment PIN_8 -to KEY[3]
+set_location_assignment PIN_153 -to OSC_27
+set_location_assignment PIN_28 -to OSC_50
+set_location_assignment PIN_204 -to TR_TXD
+set_location_assignment PIN_205 -to TR_RXD
+set_location_assignment PIN_50 -to oLED[0]
+set_location_assignment PIN_11 -to oLED[1]
+set_location_assignment PIN_228 -to oLED[2]
+set_location_assignment PIN_193 -to oLED[3]
+set_location_assignment PIN_170 -to oLED[4]
+set_location_assignment PIN_131 -to oLED[5]
+set_location_assignment PIN_108 -to oLED[6]
+set_location_assignment PIN_73 -to oLED[7]
+set_location_assignment PIN_235 -to TDI
+set_location_assignment PIN_237 -to TCK
+set_location_assignment PIN_236 -to TCS
+set_location_assignment PIN_238 -to TDO
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY TR1_CCD
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_instance_assignment -name IO_STANDARD LVTTL -to TDI
+set_instance_assignment -name IO_STANDARD LVTTL -to TCK
+set_instance_assignment -name IO_STANDARD LVTTL -to TCS
+set_instance_assignment -name IO_STANDARD LVTTL -to TDO
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPCS1
+
+# SignalTap II Assignments
+# ========================
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT OFF
+
+# -------------------
+# start CLOCK(OSC_50)
+
+	# Timing Assignments
+	# ==================
+set_global_assignment -name DUTY_CYCLE 50 -section_id OSC_50
+set_global_assignment -name FMAX_REQUIREMENT "50 MHz" -section_id OSC_50
+
+# end CLOCK(OSC_50)
+# -----------------
+
+# ----------------
+# start CLOCK(TCK)
+
+	# Timing Assignments
+	# ==================
+
+# end CLOCK(TCK)
+# --------------
+
+# -----------------------
+# start ENTITY(TR1_CCD)
+
+	# Timing Assignments
+	# ==================
+
+# end ENTITY(TR1_CCD)
+# ---------------------
+
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/command.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/control_interface.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/sdr_data_path.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_Control_4Port.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_FIFO.v
+set_global_assignment -name VERILOG_FILE Sdram_Control_4Port/Sdram_PLL.v
+set_global_assignment -name VERILOG_FILE CCD_Capture.v
+set_global_assignment -name VERILOG_FILE I2C_CCD_Config.v
+set_global_assignment -name VERILOG_FILE I2C_Controller.v
+set_global_assignment -name VERILOG_FILE Line_Buffer.v
+set_global_assignment -name VERILOG_FILE RAW2RGB.v
+set_global_assignment -name VERILOG_FILE Reset_Delay.v
+set_global_assignment -name VERILOG_FILE TR1_CCD.v
+set_global_assignment -name VERILOG_FILE VGA_Controller.v
+set_global_assignment -name VERILOG_FILE VGA_DATA_REQ.v
+set_global_assignment -name CPP_INCLUDE_FILE VGA_Param.h
+set_location_assignment PIN_199 -to JP2[0]
+set_location_assignment PIN_198 -to JP2[1]
+set_location_assignment PIN_197 -to JP2[2]
+set_location_assignment PIN_196 -to JP2[3]
+set_location_assignment PIN_195 -to JP2[4]
+set_location_assignment PIN_188 -to JP2[5]
+set_location_assignment PIN_187 -to JP2[6]
+set_location_assignment PIN_186 -to JP2[7]
+set_location_assignment PIN_185 -to JP2[8]
+set_location_assignment PIN_184 -to JP2[9]
+set_location_assignment PIN_183 -to JP2[10]
+set_location_assignment PIN_182 -to JP2[11]
+set_location_assignment PIN_181 -to JP2[12]
+set_location_assignment PIN_120 -to JP2[13]
+set_location_assignment PIN_119 -to JP2[14]
+set_location_assignment PIN_118 -to JP2[15]
+set_location_assignment PIN_117 -to JP2[16]
+set_location_assignment PIN_116 -to JP2[17]
+set_location_assignment PIN_115 -to JP2[18]
+set_location_assignment PIN_114 -to JP2[19]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[10]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[11]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[12]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[13]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[14]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[15]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[16]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[17]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[18]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[19]
+set_location_assignment PIN_113 -to JP2[20]
+set_location_assignment PIN_106 -to JP2[21]
+set_location_assignment PIN_105 -to JP2[22]
+set_location_assignment PIN_104 -to JP2[23]
+set_location_assignment PIN_103 -to JP2[24]
+set_location_assignment PIN_102 -to JP2[25]
+set_location_assignment PIN_100 -to JP2[26]
+set_location_assignment PIN_99 -to JP2[27]
+set_location_assignment PIN_98 -to JP2[28]
+set_location_assignment PIN_97 -to JP2[29]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[20]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[21]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[22]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[23]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[24]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[25]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[26]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[27]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[28]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[29]
+set_location_assignment PIN_96 -to JP2[30]
+set_location_assignment PIN_95 -to JP2[31]
+set_location_assignment PIN_94 -to JP2[32]
+set_location_assignment PIN_88 -to JP2[33]
+set_location_assignment PIN_87 -to JP2[34]
+set_location_assignment PIN_86 -to JP2[35]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[30]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[31]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[32]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[33]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[34]
+set_instance_assignment -name IO_STANDARD LVTTL -to JP2[35]
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH BUS-HOLD"
+set_location_assignment PIN_180 -to JP1[0]
+set_location_assignment PIN_179 -to JP1[1]
+set_location_assignment PIN_178 -to JP1[2]
+set_location_assignment PIN_177 -to JP1[3]
+set_location_assignment PIN_175 -to JP1[4]
+set_location_assignment PIN_174 -to JP1[5]
+set_location_assignment PIN_173 -to JP1[6]
+set_location_assignment PIN_169 -to JP1[7]
+set_location_assignment PIN_168 -to JP1[8]
+set_location_assignment PIN_167 -to JP1[9]
+set_location_assignment PIN_166 -to JP1[10]
+set_location_assignment PIN_165 -to JP1[11]
+set_location_assignment PIN_164 -to JP1[12]
+set_location_assignment PIN_163 -to JP1[13]
+set_location_assignment PIN_162 -to JP1[14]
+set_location_assignment PIN_161 -to JP1[15]
+set_location_assignment PIN_160 -to JP1[16]
+set_location_assignment PIN_159 -to JP1[17]
+set_location_assignment PIN_158 -to JP1[18]
+set_location_assignment PIN_141 -to JP1[19]
+set_location_assignment PIN_140 -to JP1[20]
+set_location_assignment PIN_139 -to JP1[21]
+set_location_assignment PIN_138 -to JP1[22]
+set_location_assignment PIN_137 -to JP1[23]
+set_location_assignment PIN_136 -to JP1[24]
+set_location_assignment PIN_135 -to JP1[25]
+set_location_assignment PIN_134 -to JP1[26]
+set_location_assignment PIN_133 -to JP1[27]
+set_location_assignment PIN_132 -to JP1[28]
+set_location_assignment PIN_128 -to JP1[29]
+set_location_assignment PIN_126 -to JP1[30]
+set_location_assignment PIN_125 -to JP1[31]
+set_location_assignment PIN_124 -to JP1[32]
+set_location_assignment PIN_123 -to JP1[33]
+set_location_assignment PIN_122 -to JP1[34]
+set_location_assignment PIN_121 -to JP1[35]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to BLUE[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to BLUE[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to BLUE[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to BLUE[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to GREEN[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to GREEN[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to GREEN[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to GREEN[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RED[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RED[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RED[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RED[3]
+set_location_assignment PIN_203 -to oCOM[0]
+set_location_assignment PIN_202 -to oCOM[1]
+set_location_assignment PIN_201 -to oCOM[2]
+set_location_assignment PIN_200 -to oCOM[3]
+set_global_assignment -name FMAX_REQUIREMENT "25 MHz" -section_id CCD_MCLK
+set_instance_assignment -name CLOCK_SETTINGS OSC_50 -to OSC_50
+set_global_assignment -name FMAX_REQUIREMENT "25 MHz" -section_id CCD_PIXCLK
+set_instance_assignment -name CLOCK_SETTINGS CCD_MCLK -to JP2[31]
+set_instance_assignment -name CLOCK_SETTINGS CCD_PIXCLK -to JP2[30]
+set_global_assignment -name AUTO_ENABLE_SMART_COMPILE ON
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to JP2[31]
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to JP2[30]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to rCCD_DATA
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to rCCD_LVAL
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to rCCD_FVAL

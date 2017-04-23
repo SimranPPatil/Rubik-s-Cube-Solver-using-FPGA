@@ -1,0 +1,14 @@
+Fitter Status : Successful - Tue Apr 04 19:15:59 2006
+Quartus II Version : 5.1 Build 213 01/19/2006 SP 1 SJ Full Version
+Revision Name : DE2_CCD_PIP
+Top-level Entity Name : DE2_CCD_PIP
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Preliminary
+Total logic elements : 1,451 / 33,216 ( 4 % )
+Total registers : 966
+Total pins : 425 / 475 ( 89 % )
+Total virtual pins : 0
+Total memory bits : 97,264 / 483,840 ( 20 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

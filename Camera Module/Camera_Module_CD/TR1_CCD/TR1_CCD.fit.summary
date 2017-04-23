@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Apr 04 20:05:30 2006
+Quartus II Version : 5.1 Build 213 01/19/2006 SP 1 SJ Full Version
+Revision Name : TR1_CCD
+Top-level Entity Name : TR1_CCD
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 1,470 / 5,980 ( 25 % )
+Total pins : 159 / 185 ( 86 % )
+Total virtual pins : 0
+Total memory bits : 48,088 / 92,160 ( 52 % )
+Total PLLs : 1 / 2 ( 50 % )

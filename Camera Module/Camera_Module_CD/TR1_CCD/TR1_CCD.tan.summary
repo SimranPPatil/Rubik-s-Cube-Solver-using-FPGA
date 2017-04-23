@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.544 ns
+From           : SD_DATA[9]
+To             : Sdram_Control_4Port:u6|mDATAOUT[9]
+From Clock     : --
+To Clock       : OSC_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 19.964 ns
+From           : VGA_Controller:u1|V_Cont[8]
+To             : RED[3]
+From Clock     : OSC_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.741 ns
+From           : JP2[33]
+To             : rCCD_FVAL
+From Clock     : --
+To Clock       : JP2[30]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Sdram_Control_4Port:u6|Sdram_PLL:sdram_pll1|altpll:altpll_component|_clk0'
+Slack          : 1.842 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : 122.58 MHz ( period = 8.158 ns )
+From           : Sdram_Control_4Port:u6|ST[0]~2386
+To             : Sdram_Control_4Port:u6|ST[9]~2517
+From Clock     : Sdram_Control_4Port:u6|Sdram_PLL:sdram_pll1|altpll:altpll_component|_clk0
+To Clock       : Sdram_Control_4Port:u6|Sdram_PLL:sdram_pll1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'OSC_50'
+Slack          : 12.071 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 126.12 MHz ( period = 7.929 ns )
+From           : Sdram_Control_4Port:u6|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|dpram_0er:fiforam|altsyncram_4fc1:altsyncram3|ram_block4a6~portb_address_reg8
+To             : VGA_Controller:u1|Cur_Color_R[8]
+From Clock     : OSC_50
+To Clock       : OSC_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'JP2[30]'
+Slack          : 32.906 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 140.96 MHz ( period = 7.094 ns )
+From           : RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component|shift_taps_17i:auto_generated|altsyncram_6av:altsyncram2|q_b[4]
+To             : RAW2RGB:u4|mCCD_G[10]
+From Clock     : JP2[30]
+To Clock       : JP2[30]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'Sdram_Control_4Port:u6|Sdram_PLL:sdram_pll1|altpll:altpll_component|_clk0'
+Slack          : 0.861 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : N/A
+From           : Sdram_Control_4Port:u6|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|alt_synch_pipe_pc8:dffpipe_ws_dgrp|dffpipe_jd9:dffpipe10|dffe11a[2]
+To             : Sdram_Control_4Port:u6|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|alt_synch_pipe_pc8:dffpipe_ws_dgrp|dffpipe_jd9:dffpipe10|dffe12a[2]
+From Clock     : Sdram_Control_4Port:u6|Sdram_PLL:sdram_pll1|altpll:altpll_component|_clk0
+To Clock       : Sdram_Control_4Port:u6|Sdram_PLL:sdram_pll1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'JP2[30]'
+Slack          : 0.861 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : Sdram_Control_4Port:u6|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|alt_synch_pipe_pc8:dffpipe_ws_dgrp|dffpipe_jd9:dffpipe10|dffe11a[5]
+To             : Sdram_Control_4Port:u6|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|alt_synch_pipe_pc8:dffpipe_ws_dgrp|dffpipe_jd9:dffpipe10|dffe12a[5]
+From Clock     : JP2[30]
+To Clock       : JP2[30]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'OSC_50'
+Slack          : 0.861 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : Sdram_Control_4Port:u6|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|alt_synch_pipe_oc8:dffpipe_rs_dgwp|dffpipe_id9:dffpipe6|dffe7a[1]
+To             : Sdram_Control_4Port:u6|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ldb1:auto_generated|alt_synch_pipe_oc8:dffpipe_rs_dgwp|dffpipe_id9:dffpipe6|dffe8a[1]
+From Clock     : OSC_50
+To Clock       : OSC_50
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
