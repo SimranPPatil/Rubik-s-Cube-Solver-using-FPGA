@@ -1,4 +1,4 @@
-module ColorDetection (input logic [9:0] pixelValue, 
+module ColorDetection (input logic [29:0] pixelValue, 
 					   input logic [10:0] X_Cont, Y_Cont,  
 					   input logic Fval, Lval, Clk,
 					   input logic [10:0] Block1X, Block1Y, 
@@ -10,8 +10,8 @@ module ColorDetection (input logic [9:0] pixelValue,
 										Block7X, Block7Y,
 										Block8X, Block8Y,
 										Block9X, Block9Y,
-						input logic [9:0] Counter_in,
-						input logic [9:0]   Color1_in,
+						input logic [29:0] Counter_in,
+						input logic [29:0]   Color1_in,
 											Color2_in,
 											Color3_in,
 											Color4_in,
@@ -20,7 +20,7 @@ module ColorDetection (input logic [9:0] pixelValue,
 											Color7_in,
 											Color8_in,
 											Color9_in,
-						output logic [9:0]  Color1,
+						output logic [29:0]  Color1,
 											Color2,
 											Color3,
 											Color4,
@@ -29,21 +29,21 @@ module ColorDetection (input logic [9:0] pixelValue,
 											Color7,
 											Color8,
 											Color9,
-						output logic [9:0] Counter_out,
+						output logic [29:0] Counter_out,
 						output logic ColorsStored
 						);
 
-logic [9:0] b1, b2, b3, b4, b5, b6, b7, b8, b9;
-logic [9:0] Counter;
+logic [29:0] b1, b2, b3, b4, b5, b6, b7, b8, b9;
+logic [29:0] Counter;
 logic Load, Reset, colS;
 
 Reset = 1'b0;
 Load = 1'b1;
-Counter = 10'h00;
+Counter = 30'h00;
 
 always_comb
 begin
-	if(Counter_in == 10'd45)
+	if(Counter_in == 30'd45)
 		colS = 1'b1;
 	else
 		colS = 1'b0;
@@ -58,7 +58,7 @@ begin
 			b1 = pixelValue;
 		end
 	else
-		b1 = 10'h0000;
+		b1 = 30'h0000;
 
 	if( X_Cont == Block2X && Y_Cont == Block2Y 
 		|| X_Cont == (Block2X-1) && Y_Cont == Block2Y 
@@ -66,11 +66,11 @@ begin
 	    || X_Cont == Block2X && Y_Cont == (Block2Y-1)
 	    || X_Cont == Block2X && Y_Cont == (Block2Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b2 = pixelValue;
 		end
 	else
-		b2 = 10'h00003
+		b2 = 30'h00003
 
 	if( X_Cont == Block3X && Y_Cont == Block3Y 
 		|| X_Cont == (Block3X-1) && Y_Cont == Block3Y 
@@ -78,11 +78,11 @@ begin
 	    || X_Cont == Block3X && Y_Cont == (Block3Y-1)
 	    || X_Cont == Block3X && Y_Cont == (Block3Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b3 = pixelValue;
 		end
 	else
-		b3 = 10'h0000;
+		b3 = 30'h0000;
 
 	if( X_Cont == Block4X && Y_Cont == Block4Y 
 		|| X_Cont == (Block4X-1) && Y_Cont == Block4Y 
@@ -90,11 +90,11 @@ begin
 	    || X_Cont == Block4X && Y_Cont == (Block4Y-1)
 	    || X_Cont == Block4X && Y_Cont == (Block4Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b4 = pixelValue;
 		end
 	else
-		b4 = 10'h0000;
+		b4 = 30'h0000;
 
 	if( X_Cont == Block5X && Y_Cont == Block5Y 
 		|| X_Cont == (Block5X-1) && Y_Cont == Block5Y 
@@ -102,11 +102,11 @@ begin
 	    || X_Cont == Block5X && Y_Cont == (Block5Y-1)
 	    || X_Cont == Block5X && Y_Cont == (Block5Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b5 = pixelValue;
 		end
 	else
-		b5 = 10'h0000;
+		b5 = 30'h0000;
 
 	if( X_Cont == Block6X && Y_Cont == Block6Y 
 		|| X_Cont == (Block6X-1) && Y_Cont == Block6Y 
@@ -114,11 +114,11 @@ begin
 	    || X_Cont == Block6X && Y_Cont == (Block6Y-1)
 	    || X_Cont == Block6X && Y_Cont == (Block6Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b6 = pixelValue;
 		end
 	else
-		b6 = 10'h0000;
+		b6 = 30'h0000;
 
 	if( X_Cont == Block7X && Y_Cont == Block7Y 
 		|| X_Cont == (Block7X-1) && Y_Cont == Block7Y 
@@ -126,11 +126,11 @@ begin
 	    || X_Cont == Block7X && Y_Cont == (Block7Y-1)
 	    || X_Cont == Block7X && Y_Cont == (Block7Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b7 = pixelValue;
 		end
 	else
-		b7 = 10'h0000;
+		b7 = 30'h0000;
 
 	if( X_Cont == Block8X && Y_Cont == Block8Y 
 		|| X_Cont == (Block8X-1) && Y_Cont == Block8Y 
@@ -138,11 +138,11 @@ begin
 	    || X_Cont == Block8X && Y_Cont == (Block8Y-1)
 	    || X_Cont == Block8X && Y_Cont == (Block8Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b8 = pixelValue;
 		end
 	else
-		b8 = 10'h0000;
+		b8 = 30'h0000;
 
 	if( X_Cont == Block9X && Y_Cont == Block9Y 
 		|| X_Cont == (Block9X-1) && Y_Cont == Block9Y 
@@ -150,11 +150,11 @@ begin
 	    || X_Cont == Block9X && Y_Cont == (Block9Y-1)
 	    || X_Cont == Block9X && Y_Cont == (Block9Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b9 = pixelValue;
 		end
 	else
-		b9 = 10'h0000;
+		b9 = 30'h0000;
 end
 
 Register block1_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color1_in+b1), .Data_out(Color1));
