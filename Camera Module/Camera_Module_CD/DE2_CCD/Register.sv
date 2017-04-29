@@ -1,11 +1,11 @@
-module Register( input logic Clk, Reset, Load,
+module Register( input logic Clk, Load,init, 
 				 input logic [29:0] Data_in,
 				 output logic [29:0] Data_out
 				);
 
 	always_ff @(posedge Clk)
 	begin
-		if(Reset)
+		if(init)
 			Data_out <= 30'h0000;
 		else
 			if(Load)
