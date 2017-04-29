@@ -1,8 +1,8 @@
-module ControlUnit ( input logic Clk, Reset, Execute, Face,
-					 output logic gc , ds , cs, cc, algstart
+module ControlUnit ( input logic Clk, Reset, Execute, Face, 
+					 output logic gc , ds , cs, cc, algstart, init, facedone
 					);
 
-enum logic [5:0] {  ResetState, Stop_1, Stop_2, Stop_3, Stop_4, Stop_5, Stop_6, Halt,
+enum logic [5:0] {  ResetState, Stop_1, Stop_2, Stop_3, Stop_4, Stop_5, Stop_6, Halt, initState,
 					DetectStart_1, GetCenters_1, ColorDetection_1, ColorChecker_1,
 					DetectStart_2, GetCenters_2, ColorDetection_2, ColorChecker_2,
 					DetectStart_3, GetCenters_3, ColorDetection_3, ColorChecker_3,
@@ -25,7 +25,8 @@ always_comb
         unique case (curr_state) 
 
             ResetState 			:    if (Execute)
-                       					next_state = DetectStart_1;
+                       					next_state = initState;
+            initState			: 	 next_state = DetectStart_1;
             DetectStart_1 		:    next_state = GetCenters_1;
             GetCenters_1 		:    next_state = ColorDetection_1;
             ColorDetection_1 	:    next_state = ColorChecker_1;
@@ -76,6 +77,8 @@ always_comb
        	cs = 1'b0;				// ColorStored
        	cc = 1'b0;				// ColorCheck
        	algstart = 1'b0;
+       	facedone = 1'b0;
+       	init = 1'b0;
 
         case (curr_state) 
 	   		
@@ -86,6 +89,12 @@ always_comb
 			       	cs = 1'b0;				// ColorStored
 			       	cc = 1'b0;				// ColorCheck
 			       	algstart = 1'b0;
+			       	init = 1'b0;
+	   			end
+
+	   		initState:
+	   			begin
+	   				init = 1'b1;
 	   			end
 	   		
 	   		DetectStart_1: 
@@ -106,7 +115,7 @@ always_comb
 	   			end
 	   		Stop_1: 
 	   			begin
-	   			
+	   				facedone = 1'b1;
 	   			end
 
 	   		DetectStart_2: 
@@ -127,7 +136,7 @@ always_comb
 	   			end
 	   		Stop_2: 
 	   			begin
-	   			
+	   				facedone = 1'b1;
 	   			end
 
 	   		DetectStart_3: 
@@ -148,7 +157,7 @@ always_comb
 	   			end
 	   		Stop_3: 
 	   			begin
-	   			
+	   				facedone = 1'b1;
 	   			end
 
 	   		DetectStart_4: 
@@ -169,7 +178,7 @@ always_comb
 	   			end
 	   		Stop_4: 
 	   			begin
-	   			
+	   				facedone = 1'b1;
 	   			end
 
 	   		DetectStart_5: 
@@ -190,7 +199,7 @@ always_comb
 	   			end
 	   		Stop_5: 
 	   			begin
-	   			
+	   				facedone = 1'b1;
 	   			end
 
 	   		DetectStart_6: 
@@ -211,7 +220,7 @@ always_comb
 	   			end
 	   		Stop_6: 
 	   			begin
-	   			
+	   				facedone = 1'b1;
 	   			end
 
 	   		Halt:
@@ -226,6 +235,8 @@ always_comb
 		       	cs = 1'b0;				// ColorStored
 		       	cc = 1'b0;				// ColorCheck
 		       	algstart = 1'b0;
+		       	init = 1'b0;
+		       	facedone = 1'b0;
 		      end
         
         endcase
