@@ -1,6 +1,6 @@
 module ColorDetection (input logic [29:0] pixelValue, 
 					   input logic [10:0] X_Cont, Y_Cont,  
-					   input logic Fval, Lval, Clk,
+					   input logic Clk,cs,init,
 					   input logic [10:0] Block1X, Block1Y, 
 										Block2X, Block2Y,
 										Block3X, Block3Y,
@@ -29,24 +29,21 @@ module ColorDetection (input logic [29:0] pixelValue,
 											Color7,
 											Color8,
 											Color9,
-						output logic [29:0] Counter_out,
-						output logic ColorsStored
+						output logic [29:0] Counter_out
 						);
 
 logic [29:0] b1, b2, b3, b4, b5, b6, b7, b8, b9;
 logic [29:0] Counter;
-logic Load, Reset, colS;
-
+logic Load, Reset;
 Reset = 1'b0;
-Load = 1'b1;
 Counter = 30'h00;
 
 always_comb
 begin
-	if(Counter_in == 30'd45)
-		colS = 1'b1;
+	if(Counter_in < 30'd45)
+		Load = cs;
 	else
-		colS = 1'b0;
+		Load = 1'b0;
 
 	if( X_Cont == Block1X && Y_Cont == Block1Y 
 		|| X_Cont == (Block1X-1) && Y_Cont == Block1Y 
@@ -54,7 +51,7 @@ begin
 	    || X_Cont == Block1X && Y_Cont == (Block1Y-1)
 	    || X_Cont == Block1X && Y_Cont == (Block1Y+1))
 		begin
-			Counter = Counter_in + 1;
+			Counter = Counter_in + 30'h00000001;
 			b1 = pixelValue;
 		end
 	else
@@ -157,18 +154,16 @@ begin
 		b9 = 30'h0000;
 end
 
-Register block1_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color1_in+b1), .Data_out(Color1));
-Register block2_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color2_in+b2), .Data_out(Color2));
-Register block3_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color3_in+b3), .Data_out(Color3));
-Register block4_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color4_in+b4), .Data_out(Color4));
-Register block5_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color5_in+b5), .Data_out(Color5));
-Register block6_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color6_in+b6), .Data_out(Color6));
-Register block7_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color7_in+b7), .Data_out(Color7));
-Register block8_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color8_in+b8), .Data_out(Color8));
-Register block9_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Color9_in+b9), .Data_out(Color9));
+Register block1_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color1_in+b1/5), .Data_out(Color1));
+Register block2_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color2_in+b2/5), .Data_out(Color2));
+Register block3_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color3_in+b3/5), .Data_out(Color3));
+Register block4_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color4_in+b4/5), .Data_out(Color4));
+Register block5_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color5_in+b5/5), .Data_out(Color5));
+Register block6_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color6_in+b6/5), .Data_out(Color6));
+Register block7_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color7_in+b7/5), .Data_out(Color7));
+Register block8_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color8_in+b8/5), .Data_out(Color8));
+Register block9_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color9_in+b9/5), .Data_out(Color9));
 
-Register counter_reg (.Clk(Clk), .Reset(Reset), .Load(Load), .Data_in(Counter), .Data_out(Counter_out));
-
-assign ColorsStored = colS;
+Register counter_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Counter), .Data_out(Counter_out));
 
 endmodule
