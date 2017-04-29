@@ -1,0 +1,52 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab8_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+E:/Lab8_provided {E:/Lab8_provided/VGA_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:32:28 on Mar 03,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Lab8_provided" E:/Lab8_provided/VGA_controller.sv 
+# -- Compiling module VGA_controller
+# 
+# Top level modules:
+# 	VGA_controller
+# End time: 12:32:30 on Mar 03,2017, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/Lab8_provided {E:/Lab8_provided/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:32:30 on Mar 03,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Lab8_provided" E:/Lab8_provided/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:32:30 on Mar 03,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -gui "+altera" -l msim_transcript -do "lab8_run_msim_rtl_verilog.do" 
+# Start time: 12:32:30 on Mar 03,2017
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.VGA_controller
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 10000 ns
+run 20ms
+# End time: 12:40:48 on Mar 03,2017, Elapsed time: 0:08:18
+# Errors: 0, Warnings: 0

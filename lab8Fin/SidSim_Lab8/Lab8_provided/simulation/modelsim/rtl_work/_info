@@ -1,0 +1,59 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Lab8_provided/simulation/modelsim
+vtestbench
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+!s110 1488565950
+!i10b 1
+!s100 PP:32XI[Ina>bmCbC9GL73
+IMDcBh31a6LWY;78agSIVL2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 testbench_sv_unit
+S1
+R0
+w1488565010
+8E:/Lab8_provided/testbench.sv
+FE:/Lab8_provided/testbench.sv
+L0 1
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1488565950.052000
+!s107 E:/Lab8_provided/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Lab8_provided|E:/Lab8_provided/testbench.sv|
+!i113 1
+Z4 o-sv -work work
+Z5 !s92 -sv -work work +incdir+E:/Lab8_provided
+vVGA_controller
+R1
+!s110 1488565949
+!i10b 1
+!s100 7O05iZVPVOL9;8RTMP2Z`3
+IzV<b>P6JloTVE54dRPXhH3
+R2
+!s105 VGA_controller_sv_unit
+S1
+R0
+w1488565834
+8E:/Lab8_provided/VGA_controller.sv
+FE:/Lab8_provided/VGA_controller.sv
+L0 26
+R3
+r1
+!s85 0
+31
+!s108 1488565948.418000
+!s107 E:/Lab8_provided/VGA_controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Lab8_provided|E:/Lab8_provided/VGA_controller.sv|
+!i113 1
+R4
+R5
+n@v@g@a_controller
