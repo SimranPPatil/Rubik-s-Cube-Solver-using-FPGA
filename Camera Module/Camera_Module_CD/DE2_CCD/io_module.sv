@@ -1,6 +1,7 @@
 module io_module (	input logic Clk, Reset, ready, Execute, 
 					input logic [1:0] to_hw_sig,
 					input logic [29:0] to_hw_port,
+					input logic [5:0] FaceNum,
 					input logic [29:0] 	Color1,
 										Color2,
 										Color3,
@@ -16,8 +17,8 @@ module io_module (	input logic Clk, Reset, ready, Execute,
 				);
 
 enum logic [5:0] {  ResetState, Wait, SendToRubik, GetFromRubik, 
-					SendBack_1, SendBack_2, SendBack_3, SendBack_4, SendBack_5, SendBack_6, SendBack_7, SendBack_8, SendBack_9,
-					GotAck_1, GotAck_2, GotAck_3, GotAck_4, GotAck_5, GotAck_6, GotAck_7, GotAck_8, GotAck_9
+					SendBack_0, SendBack_1, SendBack_2, SendBack_3, SendBack_4, SendBack_5, SendBack_6, SendBack_7, SendBack_8, SendBack_9,
+					GotAck_0, GotAck_1, GotAck_2, GotAck_3, GotAck_4, GotAck_5, GotAck_6, GotAck_7, GotAck_8, GotAck_9
 				 }  curr_state, next_state; 
 
 
@@ -41,7 +42,9 @@ always_comb
             SendToRubik			:	if(ready)
             							next_state = GetFromRubik;
             GetFromRubik		: 	if(to_hw_sig == 2'd1)
-            							next_state = SendBack_1;
+            							next_state = SendBack_0;
+            SendBack_0			: 	if(to_hw_sig == 2'd2)
+            							next_state = GotAck_0;
             SendBack_1			: 	if(to_hw_sig == 2'd2)
             							next_state = GotAck_1;
             SendBack_2			: 	if(to_hw_sig == 2'd2)
@@ -60,6 +63,8 @@ always_comb
             							next_state = GotAck_8;
             SendBack_9			: 	if(to_hw_sig == 2'd2)
             							next_state = GotAck_9;
+            GotAck_0			: 	if(to_hw_sig == 2'd1)
+            							next_state = SendBack_1;
             GotAck_1			: 	if(to_hw_sig == 2'd1)
             							next_state = SendBack_2;
             GotAck_2			: 	if(to_hw_sig == 2'd1)
@@ -94,6 +99,11 @@ always_comb
 	   		Wait: 
 	   			begin
 	   				to_sw_sig = 2'd0;
+	   			end
+
+	   		SendBack_0:
+	   			begin
+	   				to_sw_sig = 2'd1;
 	   			end
 
 	   		SendBack_1:
@@ -139,6 +149,11 @@ always_comb
 	   		SendBack_9:
 	   			begin
 	   				to_sw_sig = 2'd1;
+	   			end
+
+	   		GotAck_0:
+	   			begin
+	   				to_sw_sig = 2'd0;
 	   			end
 
 	   		GotAck_1:
@@ -206,6 +221,11 @@ always_comb
         endcase
 
         unique case (curr_state)
+
+        	SendBack_0:
+	   			begin
+	   				to_sw_port = FaceNum;
+	   			end
 
         	SendBack_1:
 	   			begin
