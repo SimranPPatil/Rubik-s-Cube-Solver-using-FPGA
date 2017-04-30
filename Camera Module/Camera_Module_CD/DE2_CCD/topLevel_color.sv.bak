@@ -15,7 +15,7 @@ module TopLevelColor ( 	input logic Clk, Reset, Execute, Face,
 					);
 
 
-logic gc, ds, cs , cc, init;
+logic gc, ds, cs , cc , algstart , init, facedone;
 
 logic CubeDetected, gotCenters; 
 

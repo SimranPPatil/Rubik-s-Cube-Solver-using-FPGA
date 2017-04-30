@@ -34,7 +34,9 @@ module ColorDetection (input logic [29:0] pixelValue,
 
 logic [29:0] b1, b2, b3, b4, b5, b6, b7, b8, b9;
 logic [29:0] Counter;
-logic Load;
+logic Load, Reset;
+Reset = 1'b0;
+Counter = 30'h00;
 
 always_comb
 begin
@@ -65,7 +67,7 @@ begin
 			b2 = pixelValue;
 		end
 	else
-		b2 = 30'h00003;
+		b2 = 30'h00003
 
 	if( X_Cont == Block3X && Y_Cont == Block3Y 
 		|| X_Cont == (Block3X-1) && Y_Cont == Block3Y 
@@ -162,6 +164,6 @@ Register block7_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color7_in+b7/
 Register block8_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color8_in+b8/5), .Data_out(Color8));
 Register block9_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Color9_in+b9/5), .Data_out(Color9));
 
-Register counter_reg (.Clk(Clk), .init(init), .Load(1'b1), .Data_in(Counter), .Data_out(Counter_out));
+Register counter_reg (.Clk(Clk), .init(init), .Load(Load), .Data_in(Counter), .Data_out(Counter_out));
 
 endmodule

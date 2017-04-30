@@ -66,9 +66,9 @@ always_comb
             GetCenters_6 		:    next_state = ColorDetection_6;
             ColorDetection_6 	:    next_state = ColorChecker_6;
             ColorChecker_6 		:	 next_state = Stop_6;
-            Stop_6				:    next_state = Halt;
+            Stop_6				:    Halt
   			
-				Halt				:	 if (~Execute)
+  			Halt				:	 if (~Execute)
             							next_state = ResetState;
         endcase
    
