@@ -11,6 +11,7 @@
 
 #include "moveComputations.h"
 #include "main.h"
+#include "solver.h"
 
 void turnCube(int turn)
 {	

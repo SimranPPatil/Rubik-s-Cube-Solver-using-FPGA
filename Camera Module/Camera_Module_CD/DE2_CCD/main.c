@@ -13,6 +13,7 @@
 #include "printFunctions.h"
 #include "moveComputations.h"
 #include "main.h"
+#include "solver.h"
 
 #define old
 
@@ -25,7 +26,7 @@ int testScan = 0;
 FILE* fp;
 
 // Manual Input
-int cubieColor[6][9] = {
+/*int cubieColor[6][9] = {
 {X,X,X,X,X,X,X,X,X}, //U
 {X,X,X,X,X,X,X,X,X}, //D
 {X,X,X,X,X,X,X,X,X}, //B

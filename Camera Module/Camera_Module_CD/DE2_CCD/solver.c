@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "solver.h"
 
-#define to_hw_port (volatile char*) 0x00000080 // actual address here
-#define to_hw_sig (volatile char*) 0x00000060 // actual address here
-#define to_sw_port (char*) 0x00000070 // actual address here
-#define to_sw_sig (char*) 0x00000050 // actual address here
-
-
+int cubieColor[6][9];
 
 int main()
 {
@@ -48,6 +44,9 @@ int main()
 		for(i = f; i<f + 9; i++)
 			printf("%2x", colors[i]);
 	}
+
+	for(i=0; i<54; i++)
+		cubeColors[i/9][i%9] = colors[i];	
 
 	return 0;
 }

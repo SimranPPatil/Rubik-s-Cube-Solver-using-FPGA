@@ -40,6 +40,7 @@
 #define left   4
 #define right  5
 
+extern int cubieColor[6][9];
 
 void solveCube();
 int optimizeCube();

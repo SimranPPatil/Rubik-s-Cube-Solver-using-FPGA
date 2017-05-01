@@ -11,6 +11,7 @@
 
 #include "printFunctions.h"
 #include "main.h"
+#include "solver.h"
 
 void writeMove(int move, int reset)
 {
