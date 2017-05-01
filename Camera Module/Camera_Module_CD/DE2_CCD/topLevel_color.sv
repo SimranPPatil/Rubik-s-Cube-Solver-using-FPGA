@@ -11,7 +11,7 @@ module TopLevelColor ( 	input logic Clk, Reset, Execute, Face,
 											Color7,
 											Color8,
 											Color9,
-						output logic ready, algstart, facedone
+						output logic algstart, facedone
 					);
 
 
