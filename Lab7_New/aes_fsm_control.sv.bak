@@ -1,0 +1,11 @@
+module aes_fsm_control (input clk,
+								input reset_n,
+								input run,
+								output logic ark, isr,
+								output logic[1:0] imc);
+								
+
+			enum logic [4:0] {addround_1, addround_2, addround_3, addround_4, addround_5, addround_6, addround_7, addround_8,
+									isr }
+								
+endmodule

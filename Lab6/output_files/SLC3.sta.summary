@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Clk'
+Slack : -9.631
+TNS   : -1781.392
+
+Type  : Slow 1200mV 85C Model Hold 'Clk'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ISDU:state_controller|State.S_32'
+Slack : -6.797
+TNS   : -6.797
+
+Type  : Slow 1200mV 85C Model Removal 'ISDU:state_controller|State.S_32'
+Slack : 0.542
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clk'
+Slack : -3.000
+TNS   : -352.520
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ISDU:state_controller|State.S_32'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Clk'
+Slack : -8.748
+TNS   : -1617.078
+
+Type  : Slow 1200mV 0C Model Hold 'Clk'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ISDU:state_controller|State.S_32'
+Slack : -6.189
+TNS   : -6.189
+
+Type  : Slow 1200mV 0C Model Removal 'ISDU:state_controller|State.S_32'
+Slack : 0.492
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clk'
+Slack : -3.000
+TNS   : -352.520
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ISDU:state_controller|State.S_32'
+Slack : 0.482
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clk'
+Slack : -4.351
+TNS   : -770.571
+
+Type  : Fast 1200mV 0C Model Hold 'Clk'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ISDU:state_controller|State.S_32'
+Slack : -3.286
+TNS   : -3.286
+
+Type  : Fast 1200mV 0C Model Removal 'ISDU:state_controller|State.S_32'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clk'
+Slack : -3.000
+TNS   : -294.229
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ISDU:state_controller|State.S_32'
+Slack : 0.492
+TNS   : 0.000
+
+------------------------------------------------------------

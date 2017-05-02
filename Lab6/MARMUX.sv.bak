@@ -1,0 +1,15 @@
+module MARMUX (input Clk, LD_MAR, GateMARMUX, MARMUX,
+				input [15:0] MAR_IR, MAR_Adder,
+				output [15:0] MAR);
+				
+				logic [15:0] MAR_temp, MAR_new;
+				always_ff @(posedge Clk)
+				begin
+					if(MARMUX == 1b'0)
+						MAR_temp = MAR_Adder;
+					else
+						MAR_temp = MAR_IR;
+				end
+				
+				tristate MARGate (.Clk(Clk), .tristate_output_enable(GATEMARMUX), .Data_write(MAR_temp), .Data_read(MAR), .Data(Data) );
+endmodule

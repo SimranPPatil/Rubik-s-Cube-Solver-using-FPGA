@@ -1,0 +1,20 @@
+module GateMUX (input logic [15:0] PC_in, MARMUX_in, ALU_in, MDR_in,
+					input logic GatePC, GateMARMUX, GateALU, GateMDR,
+					output logic [15:0] Datapath);
+					
+					logic [3:0] select = {GatePC, GateMARMUX, GateALU, GateMDR};
+					always_comb
+					begin
+						if(select == 4b'0000)
+							Datapath = 'ZZZZZZZZZZZZZZZZ';
+						if(select == 4b'1000)
+							Datapath = PC_in;
+						else if(select == 4b'0100)
+							Datapath = MARMUX_in;
+						else if(select == 4b'0010)
+							Datapath = ALU_in;
+						else if(select == 4b'0001)
+							Datapath = MDR_in;
+					end
+					
+endmodule

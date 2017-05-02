@@ -1,0 +1,6 @@
+module MAR (input Clk, LD_MAR,
+				input [1:0] MARMUX,
+				input [15:0] MAR_IR, MAR_Adder,
+				output [15:0] MAR);
+
+endmodule

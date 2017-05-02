@@ -1,0 +1,3 @@
+module addr_counter_fsm (input Clk, Reset, Execute,
+									input logic [18:0]counter_in,
+									output logic [18:0] counter_out);

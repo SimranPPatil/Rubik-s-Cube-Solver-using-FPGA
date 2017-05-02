@@ -1,0 +1,10 @@
+module ZEXT ( input Clk, 
+				  input [15:0] data_in,
+				  output [19:0] data_out);
+				  
+				  always_ff @(posedge Clk)
+				  begin
+					data_out = {0,0,0,0,data_in};
+				  end
+			
+endmodule	

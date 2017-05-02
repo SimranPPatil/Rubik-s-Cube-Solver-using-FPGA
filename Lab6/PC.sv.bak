@@ -1,0 +1,30 @@
+module PC ( input Clk, LD_PC, GATEPC, 
+				input [1:0] PCMUX,
+				input [15:0] PC_old, PC_Adder, PC_datapath,
+				output [15:0] PC_new, PC_gate );
+
+				logic [15:0] PC_temps;
+				
+				always_ff @(posedge Clk)
+				begin
+					if(LD_PC == 1b'0)
+						PC_temp = 16'h0000;
+					else
+						begin
+							if(PCMUX == 2b'00)
+								PC_temp = PC_old + 1;
+							else if(PCMUX == 2b'01)
+								PC_temp = PC_Adder;
+							else if(PCMUX == 2b'10)
+								PC_temp = PC_datapath;
+						end
+				end
+				
+				assign PC_new = PC_temp;
+				
+				always_ff @(posedge Clk)
+				begin
+					if(GATEPC)
+						PC_gate = PC_new;
+				end
+endmodule

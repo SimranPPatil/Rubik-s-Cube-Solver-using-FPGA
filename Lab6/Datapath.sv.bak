@@ -1,0 +1,8 @@
+module Datapath(input logic Clk,
+					 input logic [15:0] Data_in,
+					 output logic  
+					 inout wire [15:0] Data );
+
+					 
+					 
+endmodule

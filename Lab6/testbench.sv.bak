@@ -1,0 +1,91 @@
+module testbench();
+
+timeunit 10ns;	// Half clock cycle at 50 MHz
+			// This is the amount of time represented by #1 
+timeprecision 1ns;
+
+// These signals are internal because the processor will be 
+// instantiated as a submodule in testbench.
+logic   Clk,     			// Internal
+		  Reset,		  // Push button 0
+		  LoadA,
+		  LoadB,   // Push button 1
+		  Execute;				// Push button 2
+		  
+logic [7:0]  Din;     // switch input data
+  
+logic 		 X_out;     // DEBUG
+logic [7:0]  Aval,    // DEBUG
+				 Bval;    // DEBUG
+logic [6:0]  AhexL,
+				 AhexU,
+				 BhexL,
+				 BhexU;
+ 
+// Instantiating the DUT
+// Make sure the module and signal names match with those in your design
+Processor multi(.*);	
+
+// Toggle the clock
+// #1 means wait for a delay of 1 timeunit
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
+
+initial begin: CLOCK_INITIALIZATION
+    Clk = 0;
+end 
+
+// Testing begins here
+// The initial block is not synthesizable
+// Everything happens sequentially inside an initial block
+// as in a software program
+initial begin: TEST_VECTORS
+Reset = 0;		// Toggle Rest
+LoadB = 1;
+Execute = 1;
+Din = 8'b11111111;	// Specify Din, F, and R
+
+
+#2 Reset = 1;
+
+#2 LoadB = 0;	// Toggle LoadA
+#2 LoadB = 1;
+#2 Din = 8'b00000001;
+#2 Execute = 0;
+#2 Execute = 1;
+
+# 40 Reset = 0;		// Toggle Rest
+LoadB = 1;
+Execute = 1;
+Din = 8'h03;	// Specify Din, F, and R
+
+
+#2 Reset = 1;
+
+#2 LoadB = 0;	// Toggle LoadA
+#2 LoadB = 1;
+#2 Din = 8'h03;
+#2 Execute = 0;
+#2 Execute = 1;
+
+# 40 Reset = 0;		// Toggle Rest
+LoadB = 1;
+Execute = 1;
+Din = 8'hF0;	// Specify Din, F, and R
+
+
+#2 Reset = 1;
+
+#2 LoadB = 0;	// Toggle LoadA
+#2 LoadB = 1;
+#2 Din = 8'hF0;
+#2 Execute = 0;
+#2 Execute = 1;
+
+#39 Execute = 0;
+#2 Execute = 1;
+#39 Execute = 0;
+#2 Execute = 1;
+end
+endmodule

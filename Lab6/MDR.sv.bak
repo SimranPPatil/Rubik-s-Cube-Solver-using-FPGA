@@ -1,0 +1,4 @@
+module MDR ( input Clk, LD_MDR, );
+
+
+endmodule

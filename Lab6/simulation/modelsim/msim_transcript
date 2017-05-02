@@ -1,0 +1,306 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do SLC3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/RegFile.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/RegFile.sv 
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/nzp.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/nzp.sv 
+# -- Compiling module nzp
+# 
+# Top level modules:
+# 	nzp
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/MainAdder.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/MainAdder.sv 
+# -- Compiling module MainAdder
+# 
+# Top level modules:
+# 	MainAdder
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/Led.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/Led.sv 
+# -- Compiling module LED12Vec
+# 
+# Top level modules:
+# 	LED12Vec
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/ALU.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/HexDriver.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/tristate.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/SLC3_2.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 07:25:35 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/Mem2IO.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:35 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 07:25:36 on Mar 02,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/ISDU.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:36 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 07:25:36 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/PC.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:36 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/PC.sv 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 07:25:36 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/IR.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:36 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/IR.sv 
+# -- Compiling module IR
+# 
+# Top level modules:
+# 	IR
+# End time: 07:25:36 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/MAR.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:36 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/MAR.sv 
+# -- Compiling module MAR
+# 
+# Top level modules:
+# 	MAR
+# End time: 07:25:37 on Mar 02,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/MDR.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:37 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/MDR.sv 
+# -- Compiling module MDR
+# 
+# Top level modules:
+# 	MDR
+# End time: 07:25:37 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/SEXT.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:37 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/SEXT.sv 
+# -- Compiling module SEXT_516
+# 
+# Top level modules:
+# 	SEXT_516
+# End time: 07:25:37 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/GateMUX.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:37 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/GateMUX.sv 
+# -- Compiling module GateMUX
+# 
+# Top level modules:
+# 	GateMUX
+# End time: 07:25:37 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/test_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:37 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/test_memory.sv 
+# -- Compiling package SLC3_2
+# -- Compiling package test_memory_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 07:25:37 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/slc3.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:38 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 07:25:38 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/lc3top.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:38 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/lc3top.sv 
+# -- Compiling module lc3top
+# 
+# Top level modules:
+# 	lc3top
+# End time: 07:25:38 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/University\ of\ Illinois/Spring\ 2017/ECE\ 385/Lab_6/Lab6 {D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 07:25:38 on Mar 02,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6" D:/University of Illinois/Spring 2017/ECE 385/Lab_6/Lab6/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 07:25:38 on Mar 02,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -gui "+altera" -l msim_transcript -do "SLC3_run_msim_rtl_verilog.do" 
+# Start time: 07:25:39 on Mar 02,2017
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lc3top
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.MAR
+# Loading work.MDR
+# Loading work.IR
+# Loading work.PC
+# Loading work.GateMUX
+# Loading work.MainAdder
+# Loading work.ALU
+# Loading work.SEXT_516
+# Loading work.LED12Vec
+# Loading work.nzp
+# Loading work.RegFile
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.SLC3_2
+# Loading work.test_memory_sv_unit
+# Loading work.test_memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2000 ns
+add wave -position end sim:/testbench/slc3_sim/slc3_simul/*
+restart -f ; 10000ns
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lc3top
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.MAR
+# Loading work.MDR
+# Loading work.IR
+# Loading work.PC
+# Loading work.GateMUX
+# Loading work.MainAdder
+# Loading work.ALU
+# Loading work.SEXT_516
+# Loading work.LED12Vec
+# Loading work.nzp
+# Loading work.RegFile
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.SLC3_2
+# Loading work.test_memory_sv_unit
+# Loading work.test_memory
+# invalid command name "10000ns"
+restart -f ; run 15000ns
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lc3top
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.MAR
+# Loading work.MDR
+# Loading work.IR
+# Loading work.PC
+# Loading work.GateMUX
+# Loading work.MainAdder
+# Loading work.ALU
+# Loading work.SEXT_516
+# Loading work.LED12Vec
+# Loading work.nzp
+# Loading work.RegFile
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.SLC3_2
+# Loading work.test_memory_sv_unit
+# Loading work.test_memory
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 08:55:13 on Mar 02,2017, Elapsed time: 1:29:34
+# Errors: 4, Warnings: 2

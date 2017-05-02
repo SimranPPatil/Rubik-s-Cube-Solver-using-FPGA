@@ -1,0 +1,19 @@
+module palette_hex (input logic [4:0] pixel_in,
+							output logic [30:0] pixel_out);
+	
+logic [30:0] pixel;	
+case(pixel_in)
+	0 : pixel = 30'hb307be;
+	1 : pixel = 30'h000000;
+	2 : pixel = 30'hFFFFFF;
+	3 : pixel = 30'heb7d3c;
+	4 : pixel = 30'hfffd38;
+	5 : pixel = 30'h72ac4d;
+	6 : pixel = 30'h213963;
+	7 : pixel = 30'hbe0712;
+	
+
+endcase
+							
+							
+endmodule

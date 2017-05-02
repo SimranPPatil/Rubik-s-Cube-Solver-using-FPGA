@@ -1,0 +1,39 @@
+module MainAdder ( input logic ADDR1MUX, Clk,
+				   input logic [15:0] IR, SR1_in, PC_in,
+				   input logic [1:0] ADDR2MUX,
+				   output logic [15:0] Adder_out );
+
+				   logic [15:0] in0, in1, in2, in3, ADDR2_out, ADDR1_out;
+				   
+				   in0 = 16'h0000;
+				   
+				   // in1 = IR[5:0] SEXT
+				   SEXT #(.N(5), .M(15)) data1 ( .Clk(Clk), .data_in(IR[5:0]), .data_out(in1) );
+				   
+				   // in2 = IR[8:0] SEXT
+				   SEXT #(.N(8), .M(15)) data2 ( .Clk(Clk), .data_in(IR[8:0]), .data_out(in2) );
+				   
+				   // in3 = IR[10:0] SEXT
+				   SEXT #(.N(10), .M(15)) data3 ( .Clk(Clk), .data_in(IR[10:0]), .data_out(in3) );
+				   
+				   always_comb
+				   begin
+
+					if(ADDR2MUX == 2'b00)
+						ADDR2_out = in0;
+					else if(ADDR2MUX == 2'b01)
+						ADDR2_out = in1;
+					else if(ADDR2MUX == 2'b10)
+						ADDR2_out = in2;
+					else
+						ADDR2_out = in3;
+
+					if(ADDR1MUX)
+						ADDR2_out = PC_in;
+					else
+						ADDR1_out = SR1_in;
+
+					Adder_out = ADDR2_out + ADDR1_out;
+
+				   end
+endmodule

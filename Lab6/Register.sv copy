@@ -1,0 +1,18 @@
+module Register(input logic Clk, Reset, Load,
+				input logic [15:0] Data_in, Data_old,
+				output logic [15:0] Data_out);
+
+
+				always_ff @(posedge Clk)
+				begin
+					if(Reset)
+						Data_out <= 16'h0000;
+					else
+						begin
+							if(Load)
+								Data_out <= Data_in;
+							else
+								Data_out <= Data_old;
+						end
+				end
+endmodule

@@ -1,0 +1,9 @@
+module AddRoundKey ( input logic state[127:0], RoundKey[127:0],
+							output logic [127:0] Result);
+			
+				Result[127:96] = state[127:96] ^ RoundKey[127:96];
+				Result[95:64] = state[95:64] ^ RoundKey[95:64];
+				Result[63:32] = state[63:32] ^ RoundKey[63:32];		
+				Result[31:0] = state[31:0] ^ RoundKey[31:0];
+		
+endmodule

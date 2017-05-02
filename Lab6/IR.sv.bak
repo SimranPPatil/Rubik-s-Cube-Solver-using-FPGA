@@ -1,0 +1,3 @@
+module IR (input Clk, LD_IR,  );
+
+endmodule

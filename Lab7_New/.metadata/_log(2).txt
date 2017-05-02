@@ -1,0 +1,22 @@
+!SESSION 2017-03-08 16:11:22.470 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/altera/15.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/altera/15.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-03-08 16:14:29.718
+!MESSAGE Indexed 'lab7_app_bsp' (74 sources, 158 headers) in 1.86 sec: 4,925 declarations; 7,220 references; 48 unresolved inclusions; 3 syntax errors; 91 unresolved names (0.74%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-03-08 16:14:30.427
+!MESSAGE Indexed 'lab7_app' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-03-08 16:24:23.230
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-03-08 16:24:23.233
+!MESSAGE Executing: [C:/altera/15.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x48 --id=0x0 --timestamp=1489008719]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-03-08 16:24:25.162
+!MESSAGE Executing: [C:/altera/15.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x48 --id=0x0 --timestamp=1489008719 /cygdrive/c/altera/15.0/Lab7_New/software/lab7_app/lab7_app.elf]

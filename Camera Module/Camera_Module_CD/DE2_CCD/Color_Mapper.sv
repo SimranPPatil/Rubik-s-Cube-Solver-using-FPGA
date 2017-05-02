@@ -15,8 +15,8 @@ module  color_mapper (  input        [9:0] CubeX, CubeY,       // Cube coordinat
     we have to first cast them from logic to int (signed by default) before they are multiplied. */
       
     int DistX, DistY, Size;
-    assign DistX = 2*(DrawX - CubeX);
-    assign DistY = 2*(DrawY - CubeY);
+    assign DistX = (DrawX - CubeX);
+    assign DistY = (DrawY - CubeY);
     assign Size = CubeS;
     
     assign VGA_R = Red;

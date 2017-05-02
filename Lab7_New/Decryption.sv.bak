@@ -1,0 +1,11 @@
+module Decryption(input logic done, 
+						input logic [127:0] encrypt, 
+						output logic [127:0] decrypt);
+						
+			always_ff (@ posedge clk)
+			begin
+			if(done == 1'b1)
+				decrypt <= encrypt;
+			end
+						
+endmodule

@@ -1,0 +1,80 @@
+module RegFile( input logic Clk, Reset, Load, SR1, DR, 
+				input logic [2:0] SR2,
+				input logic [15:0] IR, Data,
+				output logic [15:0] SR2_out, SR1_out);
+				
+				logic [2:0] SR1_MUX, DR_MUX;
+				logic [15:0] R0, R1, R2, R3, R4, R5, R6, R7;
+				
+				always_comb
+				begin
+					if(SR1)
+						SR1_MUX = IR[11:9];
+					else 
+						SR1_MUX = IR[8:6];
+
+					if(DR)
+						DR_MUX = 3'b111;
+					else 
+						DR_MUX = IR[11:9];
+				end
+
+				always_ff @(posedge Clk)
+				begin
+					if(Load)
+					begin
+						if(DR_MUX = 3'b000)
+							R0 = Data;
+						else if(DR_MUX = 3'b001)
+							R1 = Data;
+						else if(DR_MUX = 3'b010)
+							R2 = Data;
+						else if(DR_MUX = 3'b011)
+							R3 = Data;
+						else if(DR_MUX = 3'b100)
+							R4 = Data;
+						else if(DR_MUX = 3'b101)
+							R5 = Data;
+						else if(DR_MUX = 3'b110)
+							R6 = Data;
+						else
+							R7 = Data;
+					end
+					else
+					begin
+						if(SR1_MUX = 3'b000)
+							SR1_out = R0;
+						else if(SR1_MUX = 3'b001)
+							SR1_out = R1;
+						else if(SR1_MUX = 3'b010)
+							SR1_out = R2;
+						else if(SR1_MUX = 3'b011)
+							SR1_out = R3;
+						else if(SR1_MUX = 3'b100)
+							SR1_out = R4;
+						else if(SR1_MUX = 3'b101)
+							SR1_out = R5;
+						else if(SR1_MUX = 3'b110)
+							SR1_out = R6;
+						else
+							SR1_out = R7;
+
+						if(SR2 = 3'b000)
+							SR2_out = R0;
+						else if(SR2 = 3'b001)
+							SR2_out = R1;
+						else if(SR2 = 3'b010)
+							SR2_out = R2;
+						else if(SR2 = 3'b011)
+							SR2_out = R3;
+						else if(SR2 = 3'b100)
+							SR2_out = R4;
+						else if(SR2 = 3'b101)
+							SR2_out = R5;
+						else if(SR2 = 3'b110)
+							SR2_out = R6;
+						else
+							SR2_out = R7;
+					end
+				end
+endmodule

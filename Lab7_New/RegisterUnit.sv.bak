@@ -1,0 +1,22 @@
+module RegisterUnit (input logic clk, ark, isr, isb, imc,
+							input logic [127:0] encrypt_ark, encrypt_isr, encrypt_isb, encrypt_imc, encrypt_in,
+							output logic [127:0] encrypt_out);
+							
+			always_ff @ (posedge clk)
+				begin
+					if(ark == 1'b1)
+						encrypt_out = encrypt_ark;
+					else if(isr == 1'b1)
+						encrypt_out = encrypt_isr;
+					else if(imc == 1'b1)
+						encrypt_out = encrypt_imc;
+					else if(isb == 1'b1)
+						encrypt_out = encrypt_isb;
+					else encrypt_out = encrypt_in; 
+				
+				end
+							
+							
+							
+							
+endmodule

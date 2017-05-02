@@ -1,0 +1,67 @@
+module ALU (input logic Clk, Reset, SR2MUX_Ctrl, LD_CC, 
+			input logic [15:0] SR1_in, SR2_in, IR,
+			input logic [1:0] ALUK,
+			output logic [15:0] Data_out,
+			output logic N, Z, P);
+
+			logic [15:0] tmp, SEXT_out, Base, Offset6;
+			logic [4:0] SEXT_in = IR[4:0];
+
+			// SEXT_out = SEXT_in;
+
+			SEXT #(.N(4), .M(15)) data ( .Clk(Clk), .data_in(SEXT_in), .data_out(SEXT_out) );
+			
+			always_ff @(posedge Clk)
+			begin
+				
+				if(SR2MUX_Ctrl)
+					tmp = SEXT_out;
+				else
+					tmp = SR2_in;
+
+				
+				if(ALUK == 2'b00)
+					Data_out = tmp + SR1_in;
+				else if(ALUK == 2'b01)
+					Data_out = tmp & SR1_in;
+				else if(ALUK == 2'b10)
+					Data_out = ~(SR1_in);
+				else
+					Data_out = 16'hxxxx ;
+	
+				if(LD_CC)
+				begin
+					if(Data_out == 16'h0000)
+						begin
+							N = 1'b0;
+							Z = 1'b1;
+							P = 1'b0;
+						end
+					else
+						begin
+							N = 1'b0;
+							Z = 1'b0;
+							P = 1'b0;
+						end
+
+					if(Data_out[15] == 1)
+						begin
+							N = 1'b1;
+							Z = 1'b0;
+							P = 1'b0;
+						end
+					else
+						begin
+							N = 1'b0;
+							Z = 1'b0;
+							P = 1'b1;
+						end
+				end
+				else
+				begin
+					N = 1'b0;
+					Z = 1'b0;
+					P = 1'b0;
+				end
+			end
+endmodule

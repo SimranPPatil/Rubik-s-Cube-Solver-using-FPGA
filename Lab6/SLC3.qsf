@@ -1,0 +1,192 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+# Date created = 18:29:22  February 21, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SLC3_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY slc3
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:29:22  FEBRUARY 21, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_TIME_SCALE "10 ns" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_Y2 -to Clk
+set_location_assignment PIN_N21 -to Continue
+set_location_assignment PIN_AG3 -to Data[15]
+set_location_assignment PIN_AF3 -to Data[14]
+set_location_assignment PIN_AE4 -to Data[13]
+set_location_assignment PIN_AE3 -to Data[12]
+set_location_assignment PIN_AE1 -to Data[11]
+set_location_assignment PIN_AE2 -to Data[10]
+set_location_assignment PIN_AD2 -to Data[9]
+set_location_assignment PIN_AD1 -to Data[8]
+set_location_assignment PIN_AF7 -to Data[7]
+set_location_assignment PIN_AH6 -to Data[6]
+set_location_assignment PIN_AG6 -to Data[5]
+set_location_assignment PIN_AF6 -to Data[4]
+set_location_assignment PIN_AH4 -to Data[3]
+set_location_assignment PIN_AG4 -to Data[2]
+set_location_assignment PIN_AF4 -to Data[1]
+set_location_assignment PIN_AH3 -to Data[0]
+set_location_assignment PIN_M23 -to Reset
+set_location_assignment PIN_R24 -to Run
+set_location_assignment PIN_AA22 -to S[15]
+set_location_assignment PIN_AA23 -to S[14]
+set_location_assignment PIN_AA24 -to S[13]
+set_location_assignment PIN_AB23 -to S[12]
+set_location_assignment PIN_AB24 -to S[11]
+set_location_assignment PIN_AC24 -to S[10]
+set_location_assignment PIN_AB25 -to S[9]
+set_location_assignment PIN_AC25 -to S[8]
+set_location_assignment PIN_AB26 -to S[7]
+set_location_assignment PIN_AD26 -to S[6]
+set_location_assignment PIN_AC26 -to S[5]
+set_location_assignment PIN_AB27 -to S[4]
+set_location_assignment PIN_AD27 -to S[3]
+set_location_assignment PIN_AC27 -to S[2]
+set_location_assignment PIN_AC28 -to S[1]
+set_location_assignment PIN_AB28 -to S[0]
+set_location_assignment PIN_H22 -to HEX0[6]
+set_location_assignment PIN_J22 -to HEX0[5]
+set_location_assignment PIN_L25 -to HEX0[4]
+set_location_assignment PIN_L26 -to HEX0[3]
+set_location_assignment PIN_E17 -to HEX0[2]
+set_location_assignment PIN_F22 -to HEX0[1]
+set_location_assignment PIN_G18 -to HEX0[0]
+set_location_assignment PIN_U24 -to HEX1[6]
+set_location_assignment PIN_U23 -to HEX1[5]
+set_location_assignment PIN_W25 -to HEX1[4]
+set_location_assignment PIN_W22 -to HEX1[3]
+set_location_assignment PIN_W21 -to HEX1[2]
+set_location_assignment PIN_Y22 -to HEX1[1]
+set_location_assignment PIN_M24 -to HEX1[0]
+set_location_assignment PIN_W28 -to HEX2[6]
+set_location_assignment PIN_W27 -to HEX2[5]
+set_location_assignment PIN_Y26 -to HEX2[4]
+set_location_assignment PIN_W26 -to HEX2[3]
+set_location_assignment PIN_Y25 -to HEX2[2]
+set_location_assignment PIN_AA26 -to HEX2[1]
+set_location_assignment PIN_AA25 -to HEX2[0]
+set_location_assignment PIN_Y19 -to HEX3[6]
+set_location_assignment PIN_AF23 -to HEX3[5]
+set_location_assignment PIN_AD24 -to HEX3[4]
+set_location_assignment PIN_AA21 -to HEX3[3]
+set_location_assignment PIN_AB20 -to HEX3[2]
+set_location_assignment PIN_U21 -to HEX3[1]
+set_location_assignment PIN_V21 -to HEX3[0]
+set_location_assignment PIN_T8 -to ADDR[19]
+set_location_assignment PIN_AB8 -to ADDR[18]
+set_location_assignment PIN_AB9 -to ADDR[17]
+set_location_assignment PIN_AC11 -to ADDR[16]
+set_location_assignment PIN_AB11 -to ADDR[15]
+set_location_assignment PIN_AA4 -to ADDR[14]
+set_location_assignment PIN_AC3 -to ADDR[13]
+set_location_assignment PIN_AB4 -to ADDR[12]
+set_location_assignment PIN_AD3 -to ADDR[11]
+set_location_assignment PIN_AF2 -to ADDR[10]
+set_location_assignment PIN_T7 -to ADDR[9]
+set_location_assignment PIN_AF5 -to ADDR[8]
+set_location_assignment PIN_AC5 -to ADDR[7]
+set_location_assignment PIN_AB5 -to ADDR[6]
+set_location_assignment PIN_AE6 -to ADDR[5]
+set_location_assignment PIN_AB6 -to ADDR[4]
+set_location_assignment PIN_AC7 -to ADDR[3]
+set_location_assignment PIN_AE7 -to ADDR[2]
+set_location_assignment PIN_AD7 -to ADDR[1]
+set_location_assignment PIN_AB7 -to ADDR[0]
+set_location_assignment PIN_AF8 -to CE
+set_location_assignment PIN_AD4 -to LB
+set_location_assignment PIN_H16 -to LED[11]
+set_location_assignment PIN_J15 -to LED[10]
+set_location_assignment PIN_G17 -to LED[9]
+set_location_assignment PIN_J17 -to LED[8]
+set_location_assignment PIN_H19 -to LED[7]
+set_location_assignment PIN_J19 -to LED[6]
+set_location_assignment PIN_E18 -to LED[5]
+set_location_assignment PIN_F18 -to LED[4]
+set_location_assignment PIN_F21 -to LED[3]
+set_location_assignment PIN_E19 -to LED[2]
+set_location_assignment PIN_F19 -to LED[1]
+set_location_assignment PIN_G19 -to LED[0]
+set_location_assignment PIN_AD5 -to OE
+set_location_assignment PIN_AC4 -to UB
+set_location_assignment PIN_AE8 -to WE
+set_global_assignment -name SYSTEMVERILOG_FILE lc3top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RegFile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE nzp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MainAdder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Led.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
+set_global_assignment -name SYSTEMVERILOG_FILE HexDriver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tristate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE test_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SLC3_2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE slc3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Mem2IO.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ISDU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MAR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MARMUX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MDR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ZEXT.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SEXT.sv
+set_global_assignment -name SYSTEMVERILOG_FILE GateMUX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Datapath.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
