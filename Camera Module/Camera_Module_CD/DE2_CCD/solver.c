@@ -4,7 +4,7 @@
 
 int cubieColor[6][9];
 
-int main()
+int solver()
 {
 	int i, face, f;
 
@@ -46,7 +46,7 @@ int main()
 	}
 
 	for(i=0; i<54; i++)
-		cubeColors[i/9][i%9] = colors[i];	
+		cubieColor[i/9][i%9] = colors[i];	
 
 	return 0;
 }

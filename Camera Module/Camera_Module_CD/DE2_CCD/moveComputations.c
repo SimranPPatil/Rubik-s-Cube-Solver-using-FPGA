@@ -10,8 +10,8 @@
 //#include "altera_up_avalon_parallel_port_regs.h"
 
 #include "moveComputations.h"
-#include "main.h"
-#include "solver.h"
+#include "mainf.h"
+//#include "solver.h"
 
 void turnCube(int turn)
 {	

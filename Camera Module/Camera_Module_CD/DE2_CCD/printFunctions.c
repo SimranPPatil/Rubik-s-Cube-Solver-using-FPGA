@@ -10,18 +10,18 @@
 //#include "altera_up_avalon_parallel_port_regs.h"
 
 #include "printFunctions.h"
-#include "main.h"
-#include "solver.h"
+#include "mainf.h"
+//#include "solver.h"
 
 void writeMove(int move, int reset)
 {
-	if(reset){
+	/*if(reset){
 		IOWR_ALTERA_AVALON_PIO_DATA(CUBE_MOVE_BASE, 0);
 		IOWR_ALTERA_AVALON_PIO_DATA(CUBE_MOVE_BASE, RESET);
 	} else {			
 		IOWR_ALTERA_AVALON_PIO_DATA(CUBE_MOVE_BASE, WE | CLOCK | move);
 		IOWR_ALTERA_AVALON_PIO_DATA(CUBE_MOVE_BASE, WE | move);
-	}
+	}*/
 }
 
 void cvrtToColorPrint(int face, int i)
