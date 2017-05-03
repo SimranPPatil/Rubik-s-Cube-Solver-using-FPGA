@@ -174,53 +174,84 @@ int i;
 			
 	for (i = 0; i < order; i++)		
 	{	
+		// TODO: The sw_sig part
 		moveCounter++;
 		switch(moves[i])		
 		{		
 			case uClock:		
-				printf("U ");		
+				printf("U ");
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x56;		
 				break;		
-			case uCClock:		
-				printf("U' ");		
+			case uCClock:	// 	up arrow
+				printf("U' ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x1f;		
 				break;		
 			case dClock:		
-				printf("D ");		
+				printf("D ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x45;
 				break;		
-			case dCClock:		
-				printf("D' ");		
+			case dCClock:	// 	down arrow
+				printf("D' ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x20;
 				break;		
 			case bClock:		
-				printf("B ");		
+				printf("B ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x43;	
 				break;		
 			case bCClock:		
-				printf("B' ");		
+				printf("B' ");	// down long arrow
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x1a;	
 				break;		
 			case fClock:		
-				printf("F ");		
+				printf("F ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x47;	
 				break;		
 			case fCClock:		
-				printf("F' ");		
+				printf("F' ");	// up long arrow
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x19;
 				break;		
 			case lClock:		
 				printf("L ");		
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x4d;
 				break;		
 			case lCClock:		
-				printf("L' ");		
+				printf("L' ");	// <-
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x1c;	
 				break;		
 			case rClock:		
 				printf("R ");		
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x53;
 				break;		
 			case rCClock:		
-				printf("R' ");		
+				printf("R' ");	//	->
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x1b;
 				break;		
 			case hRotate:		
-				printf("H ");		
+				printf("H ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x49;	
 				break;		
 			case vRotate:		
-				printf("V ");		
+				printf("V ");	
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x57;	
 				break;	
 			default:
 				printf("WTF?");
+				*to_hw_sig_font = 5;
+				*to_hw_port_font = 0x25;
 				break;
 		}		
 		//putStr("%d ", moves[i]);	
