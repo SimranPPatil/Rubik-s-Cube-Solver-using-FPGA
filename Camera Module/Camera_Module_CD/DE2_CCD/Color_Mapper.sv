@@ -205,6 +205,254 @@ module  color_mapper (  input   [539:0] CubeX, CubeY,       // Cube coordinates
             Blue = Color_B[255:248];
         end
 
+        else if( (DrawX - CubeX[309:300]) * (DrawY - CubeY[309:300]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[247:240];
+            Green = Color_G[247:240];
+            Blue = Color_B[247:240];
+        end
+
+        else if( (DrawX - CubeX[299:290]) * (DrawY - CubeY[299:290]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[239:232];
+            Green = Color_G[239:232];
+            Blue = Color_B[239:232];
+        end
+
+        else if( (DrawX - CubeX[289:280]) * (DrawY - CubeY[289:280]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[231:224];
+            Green = Color_G[231:224];
+            Blue = Color_B[231:224];
+        end
+
+        else if( (DrawX - CubeX[279:270]) * (DrawY - CubeY[279:270]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[223:216];
+            Green = Color_G[223:216];
+            Blue = Color_B[223:216];
+        end
+
+        else if( (DrawX - CubeX[269:260]) * (DrawY - CubeY[269:260]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[215:208];
+            Green = Color_G[215:208];
+            Blue = Color_B[215:208];
+        end
+
+        else if( (DrawX - CubeX[259:250]) * (DrawY - CubeY[259:250]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[207:200];
+            Green = Color_G[207:200];
+            Blue = Color_B[207:200];
+        end
+
+        else if( (DrawX - CubeX[249:240]) * (DrawY - CubeY[249:240]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[199:192];
+            Green = Color_G[199:192];
+            Blue = Color_B[199:192];
+        end
+
+        else if( (DrawX - CubeX[239:230]) * (DrawY - CubeY[239:230]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[191:184];
+            Green = Color_G[191:184];
+            Blue = Color_B[191:184];
+        end
+
+        else if( (DrawX - CubeX[229:220]) * (DrawY - CubeY[229:220]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[183:176];
+            Green = Color_G[183:176];
+            Blue = Color_B[183:176];
+        end
+
+        else if( (DrawX - CubeX[219:210]) * (DrawY - CubeY[219:210]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[175:168];
+            Green = Color_G[175:168];
+            Blue = Color_B[175:168];
+        end
+
+        else if( (DrawX - CubeX[209:200]) * (DrawY - CubeY[209:200]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[167:160];
+            Green = Color_G[167:160];
+            Blue = Color_B[167:160];
+        end
+
+        else if( (DrawX - CubeX[199:190]) * (DrawY - CubeY[199:190]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[159:152];
+            Green = Color_G[159:152];
+            Blue = Color_B[159:152];
+        end
+
+        else if( (DrawX - CubeX[189:180]) * (DrawY - CubeY[189:180]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[151:144];
+            Green = Color_G[151:144];
+            Blue = Color_B[151:144];
+        end
+
+        else if( (DrawX - CubeX[179:170]) * (DrawY - CubeY[179:170]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[143:136];
+            Green = Color_G[143:136];
+            Blue = Color_B[143:136];
+        end
+
+        else if( (DrawX - CubeX[169:160]) * (DrawY - CubeY[169:160]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[135:128];
+            Green = Color_G[135:128];
+            Blue = Color_B[135:128];
+        end
+
+        else if( (DrawX - CubeX[159:150]) * (DrawY - CubeY[159:150]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[127:120];
+            Green = Color_G[127:120];
+            Blue = Color_B[127:120];
+        end
+
+        else if( (DrawX - CubeX[149:140]) * (DrawY - CubeY[149:140]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[119:112];
+            Green = Color_G[119:112];
+            Blue = Color_B[119:112];
+        end
+
+        else if( (DrawX - CubeX[139:130]) * (DrawY - CubeY[139:130]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[111:104];
+            Green = Color_G[111:104];
+            Blue = Color_B[111:104];
+        end
+
+        else if( (DrawX - CubeX[129:120]) * (DrawY - CubeY[129:120]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[103:96];
+            Green = Color_G[103:96];
+            Blue = Color_B[103:96];
+        end
+
+        else if( (DrawX - CubeX[119:110]) * (DrawY - CubeY[119:110]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[95:88];
+            Green = Color_G[95:88];
+            Blue = Color_B[95:88];
+        end
+
+        else if( (DrawX - CubeX[109:100]) * (DrawY - CubeY[109:100]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[87:80];
+            Green = Color_G[87:80];
+            Blue = Color_B[87:80];
+        end
+
+        else if( (DrawX - CubeX[99:90]) * (DrawY - CubeY[99:90]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[79:72];
+            Green = Color_G[79:72];
+            Blue = Color_B[79:72];
+        end
+
+        else if( (DrawX - CubeX[89:80]) * (DrawY - CubeY[89:80]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[71:64];
+            Green = Color_G[71:64];
+            Blue = Color_B[71:64];
+        end
+
+        else if( (DrawX - CubeX[79:70]) * (DrawY - CubeY[79:70]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[63:56];
+            Green = Color_G[63:56];
+            Blue = Color_B[63:56];
+        end
+
+        else if( (DrawX - CubeX[69:60]) * (DrawY - CubeY[69:60]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[55:48];
+            Green = Color_G[55:48];
+            Blue = Color_B[55:48];
+        end
+
+        else if( (DrawX - CubeX[59:50]) * (DrawY - CubeY[59:50]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[47:40];
+            Green = Color_G[47:40];
+            Blue = Color_B[47:40];
+        end
+
+        else if( (DrawX - CubeX[49:40]) * (DrawY - CubeY[49:40]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[39:32];
+            Green = Color_G[39:32];
+            Blue = Color_B[39:32];
+        end
+
+        else if( (DrawX - CubeX[39:30]) * (DrawY - CubeY[39:30]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[31:24];
+            Green = Color_G[31:24];
+            Blue = Color_B[31:24];
+        end
+
+        else if( (DrawX - CubeX[29:20]) * (DrawY - CubeY[29:20]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[23:16];
+            Green = Color_G[23:16];
+            Blue = Color_B[23:16];
+        end
+
+        else if( (DrawX - CubeX[19:10]) * (DrawY - CubeY[19:10]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[15:8];
+            Green = Color_G[15:8];
+            Blue = Color_B[15:8];
+        end
+
+        else if( (DrawX - CubeX[9:0]) * (DrawY - CubeY[9:0]) <= (Size * Size) )
+        begin
+            // Color Cube
+            Red = Color_R[7:0];
+            Green = Color_G[7:0];
+            Blue = Color_B[7:0];
+        end
+
         else 
         begin
             // White Background
