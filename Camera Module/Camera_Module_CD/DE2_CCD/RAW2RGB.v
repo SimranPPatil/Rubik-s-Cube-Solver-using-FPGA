@@ -7,7 +7,9 @@ module RAW2RGB(	oRed,
 				iDATA,
 				iDVAL,
 				iCLK,
-				iRST	);
+				iRST,
+				oX_Cont,
+				oY_Cont	);
 
 input	[10:0]	iX_Cont;
 input	[10:0]	iY_Cont;
@@ -19,6 +21,8 @@ output	[9:0]	oRed;
 output	[9:0]	oGreen;
 output	[9:0]	oBlue;
 output			oDVAL;
+output	[10:0]	oX_Cont;
+output	[10:0]	oY_Cont;
 wire	[9:0]	mDATA_0;
 wire	[9:0]	mDATA_1;
 reg		[9:0]	mDATAd_0;
@@ -32,6 +36,8 @@ assign	oRed	=	mCCD_R[9:0];
 assign	oGreen	=	mCCD_G[10:1];
 assign	oBlue	=	mCCD_B[9:0];
 assign	oDVAL	=	mDVAL;
+assign oX_Cont	= 	iX_Cont;
+assign oY_Cont	=	iY_Cont;
 
 Line_Buffer 	u0	(	.clken(iDVAL),
 						.clock(iCLK),
