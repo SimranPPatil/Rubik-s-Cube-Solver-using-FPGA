@@ -173,104 +173,104 @@ int i;
 	printf("Moves:\n");	
 			
 
-	while(*to_sw_sig_font != 3);
+	//while(*to_sw_sig_font != 3);
 	for (i = 0; i < order; i++)		
 	{	
 		// TODO: The sw_sig part
-		*to_hw_sig_font = 6;
-		while(*to_sw_sig_font != 0);
+		//*to_hw_sig_font = 6;
+		//while(*to_sw_sig_font != 0);
 		moveCounter++;
 		switch(moves[i])		
 		{		
 			case uClock:		
 				printf("U ");
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x56;		
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x56;		
 				break;		
 			case uCClock:	// 	up arrow
 				printf("U' ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x1f;		
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x1f;		
 				break;		
 			case dClock:		
 				printf("D ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x45;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x45;
 				break;		
 			case dCClock:	// 	down arrow
 				printf("D' ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x20;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x20;
 				break;		
 			case bClock:		
 				printf("B ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x43;	
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x43;	
 				break;		
 			case bCClock:		
 				printf("B' ");	// down long arrow
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x1a;	
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x1a;	
 				break;		
 			case fClock:		
 				printf("F ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x47;	
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x47;	
 				break;		
 			case fCClock:		
 				printf("F' ");	// up long arrow
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x19;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x19;
 				break;		
 			case lClock:		
 				printf("L ");		
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x4d;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x4d;
 				break;		
 			case lCClock:		
 				printf("L' ");	// <-
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x1c;	
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x1c;	
 				break;		
 			case rClock:		
 				printf("R ");		
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x53;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x53;
 				break;		
 			case rCClock:		
 				printf("R' ");	//	->
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x1b;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x1b;
 				break;		
 			case hRotate:		
 				printf("H ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x49;	
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x49;	
 				break;		
 			case vRotate:		
 				printf("V ");	
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x57;	
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x57;	
 				break;	
 			default:
 				printf("WTF?");
-				while(*to_sw_sig_font != 1);
-				*to_hw_sig_font = 5;
-				*to_hw_port_font = 0x25;
+				//while(*to_sw_sig_font != 1);
+				//*to_hw_sig_font = 5;
+				//*to_hw_port_font = 0x25;
 				break;
 		}		
 		//putStr("%d ", moves[i]);	
